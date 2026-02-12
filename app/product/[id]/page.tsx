@@ -162,14 +162,15 @@ export default function ProductDetailPage() {
 
             {/* Price */}
             <div className="flex items-baseline gap-3 mb-6">
-              <span className="text-4xl font-bold text-primary">
-                ₹{product.price.toLocaleString()}
-              </span>
+             
               {product.originalPrice && (
-                <span className="text-xl text-muted-foreground line-through">
+                <span className="text-4xl font-bold text-primary" >
                   ₹{product.originalPrice.toLocaleString()}
                 </span>
               )}
+               <span   className="text-xl text-muted-foreground line-through">
+                ₹{product.price.toLocaleString()}
+              </span>
               {product.originalPrice && (
                 <span className="bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
                   Save ₹

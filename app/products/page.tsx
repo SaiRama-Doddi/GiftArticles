@@ -313,14 +313,15 @@ export default function ProductsPage() {
 
                       {/* Price */}
                       <div className="flex items-baseline gap-2">
-                        <span className="text-lg font-bold text-foreground">
-                          ₹{product.price.toLocaleString()}
-                        </span>
+                        
                         {product.originalPrice && (
-                          <span className="text-sm text-muted-foreground line-through">
+                          <span  className="text-lg font-bold text-foreground" >
                             ₹{product.originalPrice.toLocaleString()}
                           </span>
                         )}
+                        <span  className="text-sm text-muted-foreground line-through">
+                          ₹{product.price.toLocaleString()}
+                        </span>
                       </div>
                     </div>
                   </div>
