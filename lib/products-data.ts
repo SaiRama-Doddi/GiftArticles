@@ -27,6 +27,7 @@ export const categories = [
       "Water Bottles & Sippers",
       "LED Photo Frames",
       "Cushions",
+          "Sash Rolls",
     ],
   },
   {
@@ -41,8 +42,8 @@ export const categories = [
       "Sweatshirts",
       "Collar Zipper",
       "Track Suits",
-      "Caps",
-      "Sash Rolls",
+      "Caps"
+  
     ],
   },
 ];
@@ -2023,22 +2024,45 @@ export const products: Product[] = [
     reviews: 298,
   },
 
-   /*  {
+     {
     id: "96",
-    name: "Cushion",
+    name: "Sash rolls_White",
     category: "Personalised Gifts",
-    subcategory: "Photo Frames",
+    subcategory: "Sash Rolls",
+    price: 295,
+    originalPrice: 347,
+    image: "https://res.cloudinary.com/dq7hun84m/image/upload/v1771207377/Sash_rolls_White_1_v5llos.png",
+    images: [
+      "https://res.cloudinary.com/dq7hun84m/image/upload/v1771207377/Sash_rolls_White_2_dlm8sa.jpg",
+      "https://res.cloudinary.com/dq7hun84m/image/upload/v1771207378/Sash_rolls_White_3_v0ohab.jpg",
+      "https://res.cloudinary.com/dq7hun84m/image/upload/v1771207376/Sash_rolls_White_4_hov1mk.jpg"
+    ],
+   description: "Personalised Printed Sash Ribbon – Custom Text Sublimation Sashes for All Occasions",
+    details: "Get your Personalised Printed Sash Ribbon. Custom Text Sublimation Sashes are perfect Satin Sashes for All Occasions , including Wedding Birthday,Graduation Sashes.Available in pink colour, fully customisable with your name, title, or special message. Durable, elegant, and delivered with branded packaging & fast shipping across India.",
+    keyFeatures: ["Satin Material", "1 Pc in Size"],
+    inStock: true,
+    rating: 4.9,
+    reviews: 298,
+  },
+   {
+    id: "97",
+    name: "Sash rolls_Pink",
+    category: "Personalised Gifts",
+    subcategory: "Sash Rolls",
     price: 363,
     originalPrice: 308,
-    image: "https://images.unsplash.com/photo-1556574712-d4d440b67da7?w=500&h=500&fit=crop",
+    image: "https://res.cloudinary.com/dq7hun84m/image/upload/v1771207379/Sash_rolls_Pink_1_qgzzjt.jpg",
     images: [
-      "https://images.unsplash.com/photo-1556574712-d4d440b67da7?w=800&h=800&fit=crop",
+      "https://res.cloudinary.com/dq7hun84m/image/upload/v1771207378/Sash_rolls_Pink_2_zqpcxd.png",
+      "https://res.cloudinary.com/dq7hun84m/image/upload/v1771207384/Sash_rolls_Pink_3_wsmdpl.jpg",
+      "https://res.cloudinary.com/dq7hun84m/image/upload/v1771207377/Sash_rolls_Pink_4_igtbec.jpg",
+      "https://res.cloudinary.com/dq7hun84m/image/upload/v1771207376/Sash_rolls_Pink_5_o8apnw.jpg"
     ],
-   description: "Valentines Day Gift - Love MDF Cutout With Photo | Customized Gifts | Frame With Photo Upload | Love Birthday Gift For Girlfriend-Boyfriend",
-    details: "Suitable For Home Decor, gift, Photo frame, Sweetheart, couple, marriage, loved once , Any occasion.Editing - Collage editing , single photo, art ,multi photos, any photo.Please Send Good Quality Photo and Image Special personalized gift for all occasion.",
-    keyFeatures: ["Wood Material", "7 X 6 in Size"],
+   description: "Personalised Printed Sash Ribbon – Custom Text Sublimation Sashes for All Occasions",
+    details: "Get your Personalised Printed Sash Ribbon. Custom Text Sublimation Sashes are perfect Satin Sashes for All Occasions , including Wedding Birthday,Graduation Sashes.Available in pink colour, fully customisable with your name, title, or special message. Durable, elegant, and delivered with branded packaging & fast shipping across India.",
+     keyFeatures: ["Satin Material", "1 Pc in Size"],
     inStock: true,
-    rating: 4.7,
+    rating: 4.5,
     reviews: 298,
-  }, */
+  },
 ];
