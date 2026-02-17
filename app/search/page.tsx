@@ -7,12 +7,14 @@ import { useSearchParams } from 'next/navigation';
 import { Eye, ShoppingCart, Star } from 'lucide-react';
 import { products } from '@/lib/products-data';
 import { Footer } from '@/components/footer';
+import { useCart } from '@/lib/cart-context';
 
 export default function SearchPage() {
   const searchParams = useSearchParams();
   const query = searchParams.get('q') || '';
   const [hoveredId, setHoveredId] = useState<string | null>(null);
-
+  const { addItem } = useCart();
+   const [addedId, setAddedId] = useState<string | null>(null);
   const searchResults = useMemo(() => {
     if (!query.trim()) return [];
 
@@ -79,17 +81,17 @@ export default function SearchPage() {
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-300"
                   />
-                  {product.originalPrice && (
-                    <div className="absolute top-3 right-3 bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      -
-                      {Math.round(
-                        ((product.originalPrice - product.price) /
-                          product.originalPrice) *
-                          100
-                      )}
-                      %
-                    </div>
-                  )}
+                                     {product.price && product.originalPrice && (
+  <div className="absolute top-3 right-3 bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
+    -{Math.abs(
+      Math.round(
+        ((product.price - product.originalPrice) / product.price) * 100
+      )
+    )}
+    %
+  </div>
+)}
+
 
                   {/* Action Buttons */}
                   {hoveredId === product.id && (
@@ -102,9 +104,11 @@ export default function SearchPage() {
                         <Eye className="w-5 h-5" />
                       </Link>
                       <button
-                        onClick={() => {
-                          /* Add to cart logic */
-                        }}
+                         onClick={() => {
+                        addItem(product, 1);
+                        setAddedId(product.id);
+                        setTimeout(() => setAddedId(null), 2000);
+                      }}
                         className="bg-accent text-white p-3 rounded-full hover:bg-red-600 transition-colors"
                         title="Add to Cart"
                       >
@@ -146,15 +150,16 @@ export default function SearchPage() {
 
                   {/* Price */}
                   <div className="flex items-baseline gap-2">
-                    <span className="text-lg font-bold text-foreground">
-                      ₹{product.price.toLocaleString()}
+                 
+                  {product.originalPrice && (
+                    <span className="text-lg font-bold text-foreground"  >
+                      ₹{product.originalPrice.toLocaleString()}
                     </span>
-                    {product.originalPrice && (
-                      <span className="text-sm text-muted-foreground line-through">
-                        ₹{product.originalPrice.toLocaleString()}
-                      </span>
-                    )}
-                  </div>
+                  )}
+                   <span className="text-sm text-muted-foreground line-through">
+                    ₹{product.price.toLocaleString()}
+                  </span>
+                </div>
                 </div>
               </div>
             ))}

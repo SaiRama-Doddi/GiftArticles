@@ -171,10 +171,14 @@ export default function ProductDetailPage() {
                <span   className="text-xl text-muted-foreground line-through">
                 ₹{product.price.toLocaleString()}
               </span>
-              {product.originalPrice && (
+              {product.price && product.originalPrice&& (
                 <span className="bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
-                  Save ₹
-                  {(product.originalPrice - product.price).toLocaleString()}
+               
+                  {(product.price- product.originalPrice).toLocaleString()}
+                  <span className="p-2">
+                        ₹ OFF
+                  </span>
+               
                 </span>
               )}
             </div>

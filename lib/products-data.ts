@@ -2029,8 +2029,8 @@ export const products: Product[] = [
     name: "Sash rolls_White",
     category: "Personalised Gifts",
     subcategory: "Sash Rolls",
-    price: 295,
-    originalPrice: 347,
+    price:   347,
+    originalPrice: 295,  
     image: "https://res.cloudinary.com/dq7hun84m/image/upload/v1771207377/Sash_rolls_White_1_v5llos.png",
     images: [
       "https://res.cloudinary.com/dq7hun84m/image/upload/v1771207377/Sash_rolls_White_2_dlm8sa.jpg",

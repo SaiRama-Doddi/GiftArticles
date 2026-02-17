@@ -252,11 +252,16 @@ export default function ProductsPage() {
                         fill
                         className="object-cover group-hover:scale-110 transition-transform duration-300"
                       />
-                      {product.originalPrice && (
-                        <div className="absolute top-3 right-3 bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
-                          -{Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)}%
-                        </div>
-                      )}
+                             {product.price && product.originalPrice && (
+  <div className="absolute top-3 right-3 bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
+    -{Math.abs(
+      Math.round(
+        ((product.price - product.originalPrice) / product.price) * 100
+      )
+    )}
+    %
+  </div>
+)}
 
                       {/* Action Buttons */}
                       {hoveredId === product.id && (

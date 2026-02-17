@@ -105,7 +105,7 @@ export function CartContent() {
                       Price:{' '}
                     </span>
                     <p className="font-semibold text-foreground">
-                      ₹{item.product.price.toLocaleString()}
+                      ₹{(item.product.originalPrice ?? item.product.price).toLocaleString()}
                     </p>
                   </div>
 
@@ -147,7 +147,7 @@ export function CartContent() {
                     </span>
                     <p className="font-semibold text-foreground">
                       ₹
-                      {(item.product.price * item.quantity).toLocaleString()}
+                      {((item.product.originalPrice ?? item.product.price) * item.quantity).toLocaleString()}
                     </p>
                   </div>
 

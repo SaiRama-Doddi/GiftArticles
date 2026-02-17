@@ -51,7 +51,7 @@ export function CheckoutModal({
       const cartSummary = cartItems
         .map(
           (item) =>
-            `${item.product.name} (x${item.quantity}) - ₹${(item.product.price * item.quantity).toLocaleString()}`
+            `${item.product.name} (x${item.quantity}) - ₹${((item.product.originalPrice ?? item.product.price) * item.quantity).toLocaleString()}`
         )
         .join('\n');
 
