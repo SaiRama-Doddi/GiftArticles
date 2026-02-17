@@ -1314,8 +1314,8 @@ export const products: Product[] = [
     name: "T-Shirts ( Bio Wash ) ",
     category: "Wearable",
     subcategory: "T-Shirts",
-    price: 100,
-     originalPrice: 199,
+    price: 199,
+     originalPrice: 100,
     image: "https://res.cloudinary.com/dq7hun84m/image/upload/v1770394750/Tshirt1_qduugv.jpg",
     images: [
       "https://res.cloudinary.com/dq7hun84m/image/upload/v1770394749/Tshirt2_qomdgm.jpg",
