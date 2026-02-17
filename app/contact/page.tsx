@@ -29,15 +29,36 @@ export default function ContactPage() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Here you would normally send the form data to a server
-    setSubmitted(true);
-    setTimeout(() => {
-      setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
-      setSubmitted(false);
-    }, 3000);
-  };
+ const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
+
+  const message = `
+New Contact Form Submission
+
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Subject: ${formData.subject}
+Message: ${formData.message}
+`;
+
+  const whatsappUrl = `https://wa.me/917702522332?text=${encodeURIComponent(message)}`;
+
+  window.open(whatsappUrl, "_blank");
+
+  setSubmitted(true);
+
+  setTimeout(() => {
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      subject: '',
+      message: ''
+    });
+    setSubmitted(false);
+  }, 3000);
+};
 
   return (
     <main className="min-h-screen bg-background">
@@ -58,19 +79,19 @@ export default function ContactPage() {
             {
               icon: Phone,
               title: 'Phone',
-              details: '+91 9999 999 999',
+              details: '+91 7702522332',
               description: 'Mon-Sat, 10 AM - 6 PM IST',
             },
             {
               icon: Mail,
               title: 'Email',
-              details: 'hello@khushibox.com',
+              details: 'hellokhushibox@gmail.com',
               description: 'Response within 24 hours',
             },
             {
               icon: MapPin,
               title: 'Address',
-              details: 'New Delhi, India',
+              details: 'Flat No-1302, Block 1, Aditya Imperial Heights, Manjeera Pipeline Road, Hafeezpet ,500049 Hyderabad, India',
               description: 'Visit our studio by appointment',
             },
           ].map((info, index) => {
@@ -221,7 +242,7 @@ export default function ContactPage() {
               </div>
 
               {/* Inquiry Types */}
-              <div className="bg-card rounded-lg shadow-md p-6">
+        {/*       <div className="bg-card rounded-lg shadow-md p-6">
                 <h3 className="font-bold text-foreground mb-4">
                   What can we help you with?
                 </h3>
@@ -233,28 +254,28 @@ export default function ContactPage() {
                   <li>✓ Feedback and suggestions</li>
                   <li>✓ Special requests</li>
                 </ul>
-              </div>
+              </div> */}
 
-              {/* Quick Links */}
-              <div className="bg-card rounded-lg shadow-md p-6">
-                <h3 className="font-bold text-foreground mb-4">
-                  Quick Links
-                </h3>
-                <div className="space-y-2">
-                  <a href="/products" className="block text-sm text-accent hover:text-primary">
-                    → Explore Products
-                  </a>
-                  <a href="/about" className="block text-sm text-accent hover:text-primary">
-                    → About Us
-                  </a>
-                  <a href="#" className="block text-sm text-accent hover:text-primary">
-                    → FAQ
-                  </a>
-                  <a href="#" className="block text-sm text-accent hover:text-primary">
-                    → Shipping Info
-                  </a>
-                </div>
-              </div>
+{/* Location Map */}
+<div className="bg-card rounded-lg shadow-md p-6">
+  <h3 className="font-bold text-foreground mb-4">
+    Our Location
+  </h3>
+
+  <div className="rounded-xl overflow-hidden shadow-lg">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.501765622851!2d78.35637197462907!3d17.48354520002894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb924728ff2ba9%3A0x8c10083792bdba56!2sAditya%20Imperial%20Heights!5e0!3m2!1sen!2sin!4v1762704481561!5m2!1sen!2sin"
+      width="100%"
+      height="250"
+      style={{ border: 0 }}
+      allowFullScreen
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      title="Company Location"
+    />
+  </div>
+</div>
+
             </div>
           </div>
         </div>

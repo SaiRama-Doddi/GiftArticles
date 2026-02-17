@@ -92,6 +92,18 @@ export function Navbar() {
                       </NavigationMenuContent>
                     </NavigationMenuItem>
                   ))}
+
+
+        <div className="flex gap-6">
+  <a href="/contact" className="text-base font-medium text-foreground hover:text-red-600">
+    Contact
+  </a>
+
+  <a href="/about" className="text-base font-medium text-foreground hover:text-red-600">
+    About Us
+  </a>
+</div>
+
                 </NavigationMenuList>
               </NavigationMenu>
             </div>
@@ -175,10 +187,28 @@ export function Navbar() {
   </li>
 ))}
 
+
+
+
+
                   </ul>
                 </div>
               ))}
+
+
+                     <div className="flex flex-col gap-6">
+  <a href="/contact" className="text-base font-medium text-foreground hover:text-red-600">
+    Contact
+  </a>
+
+  <a href="/about" className="text-base font-medium text-foreground hover:text-red-600">
+    About Us
+  </a>
+</div>
+
             </div>
+
+            
           )}
         </div>
       </nav>
