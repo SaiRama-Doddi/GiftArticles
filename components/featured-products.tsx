@@ -12,14 +12,16 @@ export function FeaturedProducts() {
   const { addItem } = useCart();
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [addedId, setAddedId] = useState<string | null>(null);
-  const featuredProducts = products.slice(0, 8);
+const featuredProducts = Array.from(
+  new Map(products.map((item) => [item.category + item.subcategory, item])).values()
+).slice(0, 8);
 
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Featured Products
+           Explore Best Sellers
           </h2>
           <p className="text-muted-foreground text-lg">
             Handpicked collections for every moment
@@ -40,7 +42,7 @@ export function FeaturedProducts() {
                   src={product.image || "/placeholder.svg"}
                   alt={product.name}
                   fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="object-fill group-hover:scale-110 transition-transform duration-300"
                 />
               {product.price && product.originalPrice && (
   <div className="absolute top-3 right-3 bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">

@@ -37,7 +37,7 @@ export function Navbar() {
     <>
       {/* Top Banner */}
       <div className="w-full bg-gradient-to-r from-accent via-accent to-red-500 text-white py-2 text-center text-sm font-medium">
-        Welcome to Luxury Divine Store - Premium Quality Products
+        Welcome to Kushi Store - Premium Quality Products
       </div>
 
 
@@ -48,10 +48,10 @@ export function Navbar() {
 >
 
         <div className="mx-auto px-4 sm:px-6 lg:px-8" suppressHydrationWarning>
-          <div className="flex h-16 items-center justify-between">
+          <div className="flex h-16 sm:h-20 md:h-24 items-center justify-between">
             {/* Logo */}
          <Link href="/" className="flex items-center gap-2 font-bold text-xl text-primary">
-  <div className="relative w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20">
+  <div className="relative w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-28">
     <Image
       src="/logo.png"
       alt="KHUSHIBOX Logo"
@@ -69,7 +69,7 @@ export function Navbar() {
                 <NavigationMenuList className="gap-1" suppressHydrationWarning>
                   {categories.map((category) => (
                     <NavigationMenuItem key={category.name}>
-                      <NavigationMenuTrigger className="text-base font-medium text-foreground hover:text-primary">
+                      <NavigationMenuTrigger className="text-sm font-medium text-foreground hover:text-white ">
                         {category.name}
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
@@ -95,11 +95,11 @@ export function Navbar() {
 
 
         <div className="flex gap-6">
-  <a href="/contact" className="text-base font-medium text-foreground hover:text-red-600">
+  <a href="/contact" className="text-sm font-medium text-foreground hover:text-red-600">
     Contact
   </a>
 
-  <a href="/about" className="text-base font-medium text-foreground hover:text-red-600">
+  <a href="/about" className="text-sm font-medium text-foreground hover:text-red-600">
     About Us
   </a>
 </div>
@@ -111,16 +111,16 @@ export function Navbar() {
             {/* Right Section: Search, Cart, Mobile Menu */}
             <div className="flex items-center gap-4">
               {/* Search Bar */}
-              <form onSubmit={handleSearch} className="hidden md:flex items-center gap-2 bg-muted rounded-lg px-3 py-2">
-                <Search className="w-4 h-4 text-muted-foreground" />
-                <input
-                  type="text"
-                  placeholder="Search products..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="bg-transparent outline-none text-sm w-48 text-foreground placeholder:text-muted-foreground"
-                />
-              </form>
+                <form onSubmit={handleSearch} className="hidden md:flex items-center gap-2 bg-white rounded-lg px-3 py-2 " >
+                  <Search className="w-4 h-4 text-muted-foreground" />
+                  <input
+                    type="text"
+                    placeholder="Search products..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="bg-transparent  outline-none text-sm w-48 text-foreground placeholder:text-muted-foreground"
+                  />
+                </form>
 
               {/* Cart Icon */}
               <Link

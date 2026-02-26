@@ -2,6 +2,7 @@ import { HeroSection } from '@/components/hero-section'
 import { ShopByPurpose } from '@/components/shop-by-purpose'
 import { FeaturedProducts } from '@/components/featured-products'
 import { Footer } from '@/components/footer'
+import { PromiseSection } from '@/components/shopbypurpose'
 
 export default function Page() {
   return (
@@ -16,6 +17,8 @@ export default function Page() {
 
       {/* Featured Products */}
       <FeaturedProducts />
+
+       <PromiseSection/>
 
       {/* Footer */}
       <Footer />
