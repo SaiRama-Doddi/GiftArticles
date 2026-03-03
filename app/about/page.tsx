@@ -158,11 +158,11 @@ export default function AboutPage() {
                 description:
                   'Safe and secure payment options with buyer protection.',
               },
-              {
+            /*   {
                 title: 'Money Back Guarantee',
                 description:
                   '30-day money-back guarantee if you\'re not completely satisfied.',
-              },
+              }, */
             ].map((feature, index) => (
               <div
                 key={index}

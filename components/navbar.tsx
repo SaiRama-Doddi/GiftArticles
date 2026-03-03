@@ -62,11 +62,15 @@ export function Navbar() {
   </div>
 </Link>
 
-
+ 
             {/* Desktop Navigation Menu */}
             <div className="hidden lg:flex" suppressHydrationWarning>
+              
               <NavigationMenu suppressHydrationWarning>
                 <NavigationMenuList className="gap-1" suppressHydrationWarning>
+                  <a href="/" className="text-sm font-medium text-foreground hover:text-red-600 pr-2">
+   Home
+  </a>
                   {categories.map((category) => (
                     <NavigationMenuItem key={category.name}>
                       <NavigationMenuTrigger className="text-sm font-medium text-foreground hover:text-white ">
