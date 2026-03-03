@@ -6,10 +6,10 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const heroImages = [
-  'https://tse2.mm.bing.net/th/id/OIP.Gmv8LGIvZ5MyhdESo5DylwHaE8?pid=Api&P=0&h=180',
-  'https://www.incrediblegifts.in/wp-content/uploads/2022/08/calln-1.jpg',
-  'https://tse3.mm.bing.net/th/id/OIP.MDJDg1OeCF_06d2DAE9krgHaE8?pid=Api&P=0&h=180',
-  'https://tse3.mm.bing.net/th/id/OIP.MDJDg1OeCF_06d2DAE9krgHaE8?pid=Api&P=0&h=180',
+  '/images/gift-hero-1.jpg',
+  '/images/gift-hero-2.jpg',
+  '/images/gift-hero-3.jpg',
+  '/images/gift-hero-4.jpg',
 ];
 
 export function HeroSection() {

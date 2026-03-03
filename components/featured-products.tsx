@@ -41,7 +41,7 @@ const featuredProducts = Array.from(
           >
             
             {/* Product Image (Increased Height) */}
-            <div className="relative h-70 sm:h-80 lg:h-96 bg-muted overflow-hidden group">
+            <div className="relative h-64 sm:h-80 lg:h-96 bg-muted overflow-hidden group">
               <Image
                 src={product.image || "/placeholder.svg"}
                 alt={product.name}
