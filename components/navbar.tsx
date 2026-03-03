@@ -95,12 +95,13 @@ export function Navbar() {
 
 
         <div className="flex gap-6">
-  <a href="/contact" className="text-sm font-medium text-foreground hover:text-red-600">
-    Contact
-  </a>
+ 
 
   <a href="/about" className="text-sm font-medium text-foreground hover:text-red-600">
-    About Us
+    About us
+  </a>
+   <a href="/contact" className="text-sm font-medium text-foreground hover:text-red-600">
+    Contact
   </a>
 </div>
 

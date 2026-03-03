@@ -3,6 +3,7 @@ import { ShopByPurpose } from '@/components/shop-by-purpose'
 import { FeaturedProducts } from '@/components/featured-products'
 import { Footer } from '@/components/footer'
 import { PromiseSection } from '@/components/shopbypurpose'
+import WhatsNewSection from '@/components/whatsnew'
 
 export default function Page() {
   return (
@@ -18,6 +19,7 @@ export default function Page() {
       {/* Featured Products */}
       <FeaturedProducts />
 
+      {/* <WhatsNewSection/> */}
        <PromiseSection/>
 
       {/* Footer */}

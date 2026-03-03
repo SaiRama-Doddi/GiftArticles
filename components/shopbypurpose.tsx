@@ -52,17 +52,17 @@ const promises = [
   className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 flex items-center gap-4"
 >
   {/* Icon */}
-  <div className="bg-accent/10 p-3 rounded-full flex items-center justify-center shrink-0">
+  <div className="bg-[#faecc7]/65 p-3 rounded-full flex items-center justify-center shrink-0">
     <Icon className="w-6 h-6 text-accent" />
   </div>
 
   {/* Text Column */}
   <div className="flex flex-col">
-    <h3 className="font-semibold text-md text-gray-800">
+    <h3 className="font-semibold text-md text-gray-600">
       {item.title}
     </h3>
 
-    <p className="text-sm text-gray-600 leading-relaxed mt-1">
+    <p className="text-sm text-gray-500 leading-relaxed mt-1">
       {item.description}
     </p>
   </div>

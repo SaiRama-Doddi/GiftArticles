@@ -250,8 +250,9 @@ export default function ProductsPage() {
                         src={product.image || "/placeholder.svg"}
                         alt={product.name}
                         fill
-                        className="object-cover group-hover:scale-110 transition-transform duration-300"
+                        className="object-contain group-hover:scale-110 transition-transform duration-300"
                       />
+                      
                              {product.price && product.originalPrice && (
   <div className="absolute top-3 right-3 bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
     -{Math.abs(
