@@ -69,8 +69,8 @@ export function Navbar() {
               <NavigationMenu suppressHydrationWarning>
                 <NavigationMenuList className="gap-1" suppressHydrationWarning>
                   <a href="/" className="text-sm font-medium text-foreground hover:text-red-600 pr-2">
-   Home
-  </a>
+                  Home
+                 </a>
                   {categories.map((category) => (
                     <NavigationMenuItem key={category.name}>
                       <NavigationMenuTrigger className="text-sm font-medium text-foreground hover:text-white ">
@@ -172,6 +172,10 @@ export function Navbar() {
                   className="bg-transparent outline-none text-sm w-full text-foreground"
                 />
               </form>
+
+                                   <a href="/" className="pl-3 text-base font-medium text-foreground hover:text-red-600">
+   Home
+  </a>
               {categories.map((category) => (
                 <div key={category.name}>
                   <div className="font-medium text-foreground px-3 py-2">
@@ -202,6 +206,8 @@ export function Navbar() {
 
 
                      <div className="flex flex-col gap-6">
+
+
   <a href="/contact" className="text-base font-medium text-foreground hover:text-red-600">
     Contact
   </a>
